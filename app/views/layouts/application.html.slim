@@ -1,0 +1,12 @@
+doctype html
+html
+  head
+    = render "layouts/head"
+  body
+    = render "layouts/header" unless (controller_name == "index" && action_name == "index") || (controller_name == "users_info" && action_name == "new")
+
+    = flash[:notice]
+
+    = yield
+
+    =render "layouts/footer" unless controller_name == "users_info" && action_name == "new"
