@@ -1,0 +1,10 @@
+.index-bg
+  = image_tag('index/index_bg.png')
+
+  .index-logo
+    = image_tag('index/index_logo.png')
+
+  p.login-button
+   = link_to "ログイン", new_user_session_path, class:'link-button'
+  p.signup-button
+   = link_to "新規登録", registration_path, class:'link-button'

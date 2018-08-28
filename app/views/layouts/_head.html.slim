@@ -1,0 +1,14 @@
+
+meta content="text/html"
+meta charset="utf-8"
+meta http-equiv="Content_Type"
+meta name="BuddiX (バディックス )"
+
+= render "layouts/title"
+= csrf_meta_tags
+/= render "layouts/favicons"
+= render "layouts/site_name_json_ld"
+
+= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
+= javascript_pack_tag 'application'
+= javascript_pack_tag 'hello_vue'

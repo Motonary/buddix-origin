@@ -1,0 +1,109 @@
+@charset "UTF-8";
+
+#header {
+  height:70px;
+  margin:0;
+  padding:0;
+  //background-color: rgba(9,61,216,0.7);
+
+  .page_logo img{
+    width: 100vw;
+    height: 70px;
+    position: relative;
+  }
+
+  .log-out {
+    width:100px;
+    height:50px;
+    padding: 0;
+    margin: 15px 5px;
+    position: absolute;
+    top: 1px;
+    right: 23vw;
+
+    button {
+      background: #f5d60e;
+      background-image: -webkit-linear-gradient(top, #f5d60e, #c29b3a);
+      background-image: -moz-linear-gradient(top, #f5d60e, #c29b3a);
+      background-image: -ms-linear-gradient(top, #f5d60e, #c29b3a);
+      background-image: -o-linear-gradient(top, #f5d60e, #c29b3a);
+      background-image: linear-gradient(to bottom, #f5d60e, #c29b3a);
+      -webkit-border-radius: 9;
+      -moz-border-radius: 9;
+      border-radius: 9px;
+      font-family: Arial;
+      color: #ffffff;
+      font-size: 15px;
+      padding: 5px 10px 5px 10px;
+      text-decoration: none;
+    }
+
+    button:hover {
+      background: #fcb63c;
+      background-image: -webkit-linear-gradient(top, #fcb63c, #d99734);
+      background-image: -moz-linear-gradient(top, #fcb63c, #d99734);
+      background-image: -ms-linear-gradient(top, #fcb63c, #d99734);
+      background-image: -o-linear-gradient(top, #fcb63c, #d99734);
+      background-image: linear-gradient(to bottom, #fcb63c, #d99734);
+      text-decoration: none;
+    }
+   }
+
+   dl.search{
+      margin-right: 5px;
+      position:relative;
+      background-color:#fff;
+      border:1px solid #aaa;
+      -webkit-border-radius:6px;
+      -moz-border-radius:6px;
+      -o-border-radius:6px;
+      -ms-border-radius:6px;
+      border-radius:6px;
+      width:20%;
+      position: absolute;
+      top: 2px;
+      right: 1vw;
+      opacity: 0.9;
+
+      dt {
+          margin-right:40px;
+          padding:0;
+
+          input{
+              width:100%;
+              height:20px;
+              line-height:20px;
+              background:none;
+              border:none;
+          }
+      }
+      dd {
+          position:absolute;
+          top:0;
+          right:0;
+
+          button{
+              display:block;
+              padding:2px;
+              background:none;
+              border:none;
+
+              span{
+                  display:block;
+                  width:20px;
+                  height:20px;
+                  position: relative;
+              }
+              span:before {
+                position: absolute;
+                top: 0;
+                right: 0;
+                content: '\f002';
+                color: #333;
+                font-size: 20px;
+                font-family: fontAwesome;
+              }
+          }
+    }
+  }
+}

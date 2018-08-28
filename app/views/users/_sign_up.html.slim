@@ -1,0 +1,61 @@
+.sign-in-up
+  .login-box
+    h1 ログイン
+    - form_for(resource, as: resource_name, url: user_session_path(resource_name), html:{id:"login"}) do |f|
+      .field
+        = f.label :email
+        = f.email_field :email, autocomplete: "email", placeholder:"Email"
+
+      .field
+        = f.label :password
+        = f.password_field :password, autocomplete: "off"
+
+      .login-checkbox
+        = f.check_box :remember_me, {id: "login-checkbox", class:"valign", checked:true}, true, false
+        label.valign for="login-checkbox"
+          | ログイン情報を保持する
+      .login-button
+        button type="submit"
+          | ログイン
+      h2 Facebookアカウントでログインした方
+      .facebook-button
+        = link_to root_path, class:"facebook-button-link" do
+          | Facebookでログイン
+
+  .sign-up-box
+  h1 新規登録
+  - form_for(resource, as: resource_name, url: registration_path, html:{id:"signup", class:"signup-box-form"}) do |f|
+    .field
+      = f.label :email
+      = f.email_field :email, autofocus: true, autocomplete: "email"
+
+    .field
+      = f.label :password
+      - if @minimum_password_length
+      em #{@minimum_password_length} characters minimum
+      br
+      = f.password_field :password, autocomplete: "off"
+
+    .field
+      = f.label :password_confirmation
+      = f.password_field :password_confirmation, autocomplete: "off"
+
+    .signup-button
+      button type="submit"
+        | 新規登録
+
+    .signup-box-buttons
+      .mail-button
+        a.mail-button-link
+          | メールアドレスで登録
+      .facebook-button
+        h2 Facebookをお持ちの方
+        = link_to root_path, class: "facebook-button-link" do
+          | Facebookで登録する
+      .warning-notice
+        .contract
+          | アカウントを作成することにより、
+          = link_to "利用規約", terms_of_service_path, target:"_blank"
+          | および
+          = link_to "プライバシーポリシー", privacypolicy_path, target:"_blank"
+          | に同意されたものとさせていただきます

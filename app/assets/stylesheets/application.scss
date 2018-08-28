@@ -1,2 +1,80 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require font-awesome
 // bootstrap導入、おいおい削除。
 @import "bootstrap";
+
+ html {
+   position: relative;
+   min-height: 100%;
+ }
+
+body {
+  /* フッタの高さに設定 */
+   margin-bottom: 50px;
+
+   /* 一番下までスクロールした時の余白 */
+   padding-bottom: 0;
+}
+//-----------SIGN UP----------------//
+#sign-up {
+  width: 50vw;
+  height: 70vh;
+  padding: 0.5em 1em;
+  margin: 2em auto;
+  color: #5d627b;
+  background: white;
+  border-top: solid 5px #092A6E;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
+  text-align: center;
+}
+
+#sign-up .signup-button {
+  background: #092A6E;
+  background-image: -webkit-linear-gradient(top, #092A6E, #2c6bb8);
+  background-image: -moz-linear-gradient(top, #092A6E, #2c6bb8);
+  background-image: -ms-linear-gradient(top, #092A6E, #2c6bb8);
+  background-image: -o-linear-gradient(top, #092A6E, #2c6bb8);
+  background-image: linear-gradient(to bottom, #092A6E, #2c6bb8);
+  -webkit-border-radius: 8;
+  -moz-border-radius: 8;
+  border-radius: 8px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 14px;
+  margin: 10px 5px;
+  padding: 5px 10px 5px 10px;
+  text-decoration: none;
+}
+#sign-up .signup-button:hover {
+  background: #092A6E;
+  opacity: 0.8;
+  background-image: -webkit-linear-gradient(top, #092A6E, #4470c7);
+  background-image: -moz-linear-gradient(top, #092A6E, #4470c7);
+  background-image: -ms-linear-gradient(top, #092A6E, #4470c7);
+  background-image: -o-linear-gradient(top, #092A6E, #4470c7);
+  background-image: linear-gradient(to bottom, #092A6E, #4470c7);
+  text-decoration: none;
+}
+#sign-up .facebook-button-link {
+  background: #4368B0;
+  -webkit-border-radius: 8;
+  -moz-border-radius: 8;
+  border-radius: 8px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 14px;
+  margin: 10px 5px;
+  padding: 7px 14px 7px 14px;
+  text-decoration: none;
+}

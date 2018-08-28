@@ -8,6 +8,7 @@ gem 'puma', '~> 3.11'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.2'
+gem 'webpacker', '~> 3.5'
 gem 'turbolinks', '~> 5'
 gem 'bootsnap', require: false
 gem 'jbuilder', '~> 2.5'
@@ -15,9 +16,16 @@ gem 'jbuilder', '~> 2.5'
 # 暫定的bootstrap導入。将来的にはjqueryも含めて排除したい。
 gem 'bootstrap', '~> 4.1.1'
 gem 'jquery-rails'
+gem 'jquery-ui-rails'
+
+gem 'slim-rails'
+gem 'config'
+gem 'omniauth-facebook'
+gem 'font-awesome-rails'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'pry-rails'
 end
 
 group :development do
@@ -25,6 +33,7 @@ group :development do
   gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'letter_opener_web'
 end
 
 group :test do

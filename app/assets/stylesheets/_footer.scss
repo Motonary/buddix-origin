@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+#footer-menu {
+  position: fixed;
+  bottom: 0;
+  margin-bottom: 0;
+  width: 100%;
+
+  /* フッタの高さ */
+  height: 50px;
+  /*background: rgba(9,61,216,0.8);*/
+
+  ul {
+    display: table;
+    table-layout: fixed;
+    text-align: center;
+    width: 100%;
+    padding: 10px 0;
+    margin: 0px;
+
+    li {
+      display: table-cell;
+      vertical-align: middle;
+
+      .footer-menu-column {
+        color: #fff;
+      }
+    }
+  }
+}
