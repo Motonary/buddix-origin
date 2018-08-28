@@ -6,11 +6,15 @@ gem 'rails', '~> 5.2.1'
 gem 'sqlite3'
 gem 'puma', '~> 3.11'
 gem 'sass-rails', '~> 5.0'
-gem 'bootstrap-sass'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
+gem 'bootsnap', require: false
 gem 'jbuilder', '~> 2.5'
+
+# 暫定的bootstrap導入。将来的にはjqueryも含めて排除したい。
+gem 'bootstrap', '~> 4.1.1'
+gem 'jquery-rails'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
