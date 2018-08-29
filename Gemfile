@@ -23,6 +23,10 @@ gem 'config'
 gem 'omniauth-facebook'
 gem 'font-awesome-rails'
 
+gem 'activeadmin'
+gem 'draper'
+gem 'pundit'
+
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'pry-rails'
