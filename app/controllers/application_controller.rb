@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::Base
-  #protect_from_forgery
+  include Pundit
+  protect_from_forgery
 
   before_action :set_root_title
 
@@ -67,6 +68,17 @@ class ApplicationController < ActionController::Base
     @msg = exception.class.to_s == exception.message ? "不正なアクセス" : exception.message
 
     render template: 'errors/400_invalied', status:400, layout:'application', content_type: 'text/html'
+  end
+
+  def access_denied(exception)
+    redirect_to root_path, notice: "only admin users role can access the page you've accessed."
+  end
+
+  def authenticate_admin_user!
+
+  end
+
+  def current_admin_user
   end
 
 end

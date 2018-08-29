@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
-  root 'home#top'
-  get  'home/about'
+
+  begin
+    ActiveAdmin.routes(self)
+  rescue Exception => e
+    puts "ActiveAdmin: #{e.class}: #{e}"
+  end
 
   scope module: 'index' do
     get 'buddix', as: :buddix_info
@@ -31,5 +35,8 @@ Rails.application.routes.draw do
   if Rails.env.development? #開発環境の場合
     mount LetterOpenerWeb::Engine, at: "/letter_opener"
   end
+
+
+  root "index#index"
 
 end
