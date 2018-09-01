@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'home#top'
+  root 'index#index'
   get  'home/about'
 
   scope module: 'index' do
