@@ -1,6 +1,6 @@
 div#header
   .page_logo
-    =image_tag('header/header.png')
+    //=image_tag('header/header.png')
 
   form action="/" name="search" method="get"
     dl.search
@@ -10,6 +10,6 @@ div#header
           button
             span
 
-  - if user_signed_in?
+  //- if user_signed_in?
     .log-out
       button = link_to "ログアウト", destroy_user_session_path, style:"text-decoration:none"

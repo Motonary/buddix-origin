@@ -12,6 +12,7 @@ gem 'webpacker', '~> 3.5'
 gem 'turbolinks', '~> 5'
 gem 'bootsnap', require: false
 gem 'jbuilder', '~> 2.5'
+gem 'react-rails'
 
 # 暫定的bootstrap導入。将来的にはjqueryも含めて排除したい。
 gem 'bootstrap', '~> 4.1.1'
